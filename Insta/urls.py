@@ -21,7 +21,7 @@ from Insta.views import (HelloWorld,PostsListView,PostsDetailView,PostsCreateVie
 
 urlpatterns = [
     path('helloword/', HelloWorld.as_view(),name='helloword'),  
-    path('posts/', PostsListView.as_view(),name='posts'),  
+    path('', PostsListView.as_view(),name='posts'),  
     path('post/<int:pk>/', PostsDetailView.as_view(), name='post_detail'),
     path('posts/new/', PostsCreateView.as_view(), name='make_post'),
     path('posts/update/<int:pk>/', PostsUpdateView.as_view(), name='update_post'),
