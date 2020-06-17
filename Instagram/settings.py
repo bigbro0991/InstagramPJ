@@ -130,3 +130,5 @@ LOGIN_REDIRECT_URL = "posts"
 LOGOUT_REDIRECT_URL = "posts"
 
 AUTH_USER_MODEL = 'Insta.InstaUser'#tell django we using our own usemodel
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
