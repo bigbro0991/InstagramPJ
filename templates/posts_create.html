@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New post</h1><!--django template {百分号   百分号}  django variable 两个大括号   从view 传递给html一个form  使用form里的as_p函数    作用 把form 每一个元素当成 paragraph 显示出来-->
+
+<form action="" method="post" enctype="multipart/form-data">      <!-- 因为有image 还有 title 所以用multipart 加密 -->
+    {% csrf_token %}     
+    {{form.as_p}}      
+    <button type="submit">Save</button> <!-- csrf_token 防止form 遭受网络攻击 django 自带功能-->
+</form>
+{% endblock content %}
